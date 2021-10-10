@@ -1,2 +1,2 @@
 # BibleCal
-A gulp based Drupal 9 theme
+A gulp powered Drupal 9 theme based off of the Boostrap 3 theme
