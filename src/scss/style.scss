@@ -1,0 +1,446 @@
+$linkColor: #336688;
+
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap');
+body {
+	opacity: 1;
+	background: url(../images/background.jpg) bottom center no-repeat;
+    background-color: #28599b;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-width: 320px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* header */
+#navbar {
+	background-color: transparent;
+	background-image: url("../images/headerBG.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 141px;
+
+	#block-biblecal-account-menu {
+		display: none;
+	}
+
+	&.navbar-default {
+		.navbar-nav {
+			> .open {
+				> a {
+					&:hover {
+						background-color: rgba(255,255,255,0.2);
+					}
+					&:focus {
+						background-color: rgba(255,255,255,0.2);
+					}
+					background-color: rgba(255,255,255,0.2);
+				}
+			} 
+		} 
+		.dropdown-menu {
+			background: #295ba0;
+			>li  {
+				>a {
+					&:hover {
+						background: #114da0;
+					}
+					
+				}
+			}
+		}
+	} 
+	.navbar-brand {
+		display: none;
+	}
+	.menu {
+		float: left;
+		clear: both;
+		li {
+			a {
+				color: #fff;
+			}
+			&.active {
+				a {
+					background: rgba(255,255,255,0.4);
+				}
+			}
+		}
+	}
+}
+
+/* language */
+#block-languageswitcher {
+	background: #333;
+	color: #fff;
+	position: absolute;
+	right: 10px;
+	top: 0;
+	width: auto;
+	>ul.links {
+		list-style-type: none;
+		margin: 0;
+		padding:0;
+		display: flex;
+		li {
+			list-style-type: none;
+			padding: 5px;
+
+			a {
+				color: #fff;
+			}
+		}
+	}
+}
+
+#block-heroimages {
+	position: absolute;
+	top: 140px;
+	left: 0;
+	width: 100%;
+	height: 365px;
+	background-color: rgba(255,255,255,0.3);
+
+	.scroller_wrapper {
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			animation: banner linear 100s infinite;
+			  
+			li {
+				flex: 1 auto;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				height: 365px;
+				width: 342px;
+				min-width: 342px;
+				background-repeat: no-repeat;
+				background-size: cover;
+				&:nth-child(1){
+					background-image: url(../images/bannerImage_01.jpg);
+				}
+				&:nth-child(2){
+					background-image: url(../images/bannerImage_02.jpg);
+				}
+				&:nth-child(3){
+					background-image: url(../images/bannerImage_03.jpg);
+				}
+				&:nth-child(4){
+					background-image: url(../images/bannerImage_04.jpg);
+				}
+				&:nth-child(5){
+					background-image: url(../images/bannerImage_05.jpg);
+				}
+				&:nth-child(6){
+					background-image: url(../images/bannerImage_06.jpg);
+				}
+				&:nth-child(7){
+					background-image: url(../images/bannerImage_07.jpg);
+				}
+			}
+		}
+	}
+}
+
+.main-container > .row aside {
+	height: 70px;
+}
+.region-sidebar-second {
+	display: none;
+}
+
+
+.main-container {
+	max-width: 1010px;
+	margin-top: 415px;
+	color: #fff;
+	>.row {
+		section {
+			width: 100%;
+		}
+		aside {
+			width: 100%;
+			clear: both;
+		}
+	}
+	a {
+		color: #fff;
+	}
+	.well {
+		color: #333;
+		a {
+			color: $linkColor;
+		}
+	}
+	.panel {
+		.panel-body {
+			color: #000;
+		}
+	}
+}
+
+.path-frontpage {
+	.featuredlinks {
+		a{
+			display: block;
+			img {
+				width: 100%;
+			}
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+		
+	}
+}
+.path-calendar {
+	.view-significant-dates {
+
+		.content, footer {
+			display: none;
+		}
+	}
+	.region-content {
+		border-top: 1px dotted #ccc;
+		padding-top: 1em;
+		margin-top: 1em;
+	}
+	.SignificantDateRow {
+		margin-bottom: 1em;
+		h2 {
+			background: #eee;
+			color: #fff;
+			padding: 10px;
+			margin: 0;
+			border-radius: .5em;
+			font-size: 1.5em;
+			a {
+				color: #999;
+			}
+		}
+		
+	}
+	#block-views-block-expanded-calendar-information-block-1 {
+		position: fixed;
+		width: 100%;
+		height: calc(100vh - 60px);
+		height: 150px;
+		padding: 2em;
+		background: rgba(255,255,255,.2);
+		top: 60px;
+		left: 0;
+		z-index: 78;
+		overflow: hidden;
+		position: static;
+		border: 2px dashed #ccc;
+		color: #000;
+		margin: 2em 0;
+
+		.expanded-calendar-wrapper {
+			.view-content {
+				margin-bottom: 2em;
+				display: flex;
+				.views-row {
+					flex: 1 auto;
+				}
+			}
+		}
+	}
+	#block-calendarpagebottomtext {
+		h2 {
+			display: none;
+		}
+		margin-top: 2em;
+	}
+} 
+
+/* chart block */
+.view-id-biblical_charts {
+	.view-content {
+		display: flex;
+		flex-wrap: wrap;
+		.views-row {
+			flex: 1 25%;
+			background-image: url(/sites/default/files/linkIcon.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			max-width: 25%;
+			height: 184px;
+			margin: 0 10px;
+			padding: 2em;
+			
+		}
+	}
+}
+
+/* timeline */
+.view-timeline {
+	.timeline-line {
+		transition: all ease 0.3s;
+		border-left: 2px solid #336688;
+		position: absolute;
+		width: 1px;
+		left: 0;
+		
+		&::before {
+			content: "";
+			border-top:2px solid #336688;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50vw;
+		}
+		&::after {
+			content: "";
+			border-top:2px solid #336688;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 50vw;
+		}
+		&.hover{
+			border-color: orange;
+
+			&::before {
+				border-color: orange;
+			}
+			&::after {
+				border-color: orange;
+			}
+		}
+	}
+	.view-content {
+		position: relative;
+		z-index: 300;
+	}
+	.views-row {
+		font-size: 1.3em;
+		margin: 1em 0;
+		display: flex;
+		transition: all ease 0.3s;
+		border-top: 1px solid transparent;
+		border-bottom: 1px solid transparent;
+		background: #28599b;
+		.views-field-title {
+			transition: all ease 0.3s;
+		}
+		&.hover {
+			border: 1px solid orange;
+			.views-field-title {
+				text-indent: 2px;
+			}
+			
+		}
+		&.duplicate {
+			.views-field-field-gc-era, .views-field-field-gc-year {
+				visibility: hidden;
+			}
+		}
+		&.connected {
+			border-left: 3px solid pink;
+		}
+		>* {
+			flex: 1 auto;
+			padding: 0.4em;
+
+			&.views-field-field-gc-year {
+				order: 1;
+				background: #333;
+				color: #fff;
+				padding-right: 0;
+			}
+			&.views-field-field-gc-era {
+				order: 2;
+				background: #333;
+				color: #fff;
+
+			}
+			&.views-field-title {
+				order: 3;
+				flex: 1 99%;
+			}
+			&.views-field-field-am-year {
+				position: absolute;
+				right: 0;
+				white-space: nowrap;
+				display: flex;
+				.field-content {
+					margin-left: 5px;
+				}
+			}
+			&.views-field-field-related {
+				position: absolute;
+				right: 50px;
+				display: none;
+			}
+		}
+		
+	}
+	&.horiz {
+		overflow: auto;
+		height: 350px;
+		.view-content {
+			position: static;
+			margin-left: 0!important;
+			top: 0;
+			left: 0;
+			height: 350px;
+			overflow: auto;
+			display: flex;
+			.views-row {
+				flex: 1 auto;
+				min-width: 300px;
+				display: block;
+				position: relative;
+				*{
+					&.views-field-field-am-year {
+						position: static;
+						right: 0;
+						clear: both;
+						width: 100%;
+						float: none;
+						display: flex;
+					}
+					&.views-field-field-related {
+						position: static;
+						right: 50px;
+					}
+					&.views-field-field-gc-era {
+						float: left;
+						position: absolute;
+						top: 0;
+						left: 0;
+
+
+					}
+					&.views-field-title {
+						margin-top: 50px;
+					}
+					&.views-field-field-gc-year{
+						float: left;
+						position: absolute;
+						top: 0;
+						left: 38px;
+						
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@keyframes banner {
+	0% {
+	  transform: translateX(0);
+	}
+	100% {
+	  transform: translateX(-100%);
+	}
+  }
+  
