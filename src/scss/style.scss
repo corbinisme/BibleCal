@@ -1,10 +1,12 @@
 $linkColor: #336688;
+$timelineBorderLine: #b2ccdd;
 
 @import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap');
 body {
 	opacity: 1;
 	background: url(../images/background.jpg) bottom center no-repeat;
     background-color: #28599b;
+	background-size: 110%;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -20,7 +22,11 @@ body {
 	background-image: url("../images/headerBG.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 141px;
+	min-height: 141px;
+	width: 100%;
+	max-width: 100vw;
+	margin-bottom: 0;
+	padding-top: 40px;
 
 	#block-biblecal-account-menu {
 		display: none;
@@ -55,6 +61,15 @@ body {
 	.navbar-brand {
 		display: none;
 	}
+	.logo {
+		img {
+			max-width: calc(100vw - 128px);
+		}
+	}
+
+	.navbar-toggle {
+		top: 15px;
+	}
 	.menu {
 		float: left;
 		clear: both;
@@ -76,10 +91,12 @@ body {
 	background: #333;
 	color: #fff;
 	position: absolute;
-	right: 10px;
+	right: 0px;
+	width: 100%!important;
 	top: 0;
 	width: auto;
 	>ul.links {
+		float: right;
 		list-style-type: none;
 		margin: 0;
 		padding:0;
@@ -96,11 +113,13 @@ body {
 }
 
 #block-heroimages {
-	position: absolute;
-	top: 140px;
-	left: 0;
-	width: 100%;
+
+	width: 100vw;
+	position: relative;
+	margin-left: -50vw;
+	left: 50%;
 	height: 365px;
+	overflow: hidden;
 	background-color: rgba(255,255,255,0.3);
 
 	.scroller_wrapper {
@@ -157,7 +176,6 @@ body {
 
 .main-container {
 	max-width: 1010px;
-	margin-top: 415px;
 	color: #fff;
 	>.row {
 		section {
@@ -184,6 +202,14 @@ body {
 	}
 }
 
+.footer {
+	border: none;
+	.container {
+		position: relative;
+		top: 1em;
+	}
+}
+
 .path-frontpage {
 	.featuredlinks {
 		a{
@@ -197,12 +223,84 @@ body {
 		}
 		
 	}
+	.main-container {
+		padding-top: 0!important;
+	}
+
+	#block-subhero {
+		background: #4a98dc;
+		color: #fff;
+		padding: 2em;
+		text-align: center;
+		font-size: 2em;
+		width: 100vw;
+		position: relative;
+		margin-left: -50vw;
+		left: 50%;
+		margin-bottom: 50px;
+		
+	}
+}
+.region-header {
+	.breadcrumb {
+		background: #333;
+	}
+	.page-header {
+		margin-top: 1em;
+	}
 }
 .path-calendar {
 	.view-significant-dates {
 
 		.content, footer {
 			display: none;
+		}
+	}
+	.breadcrumb {
+		display: none;
+	}
+	.main-container {
+		max-width: 100%;
+		width: 100%;
+		.row {
+			section.col-sm-12, section.col-sm-9 {
+				padding: 0;
+
+				section {
+					padding: 1em;
+				}
+			}
+		}
+	}
+	#block-heroimages {
+		display: none;
+	}
+
+	#block-calendarblock, #block-calendarpagebottomtext {
+		max-width: 976px;
+		width: 80%;
+		margin: auto;
+	}
+	h1 {
+		text-align: center;
+		&.page-header {
+			display: none;
+		}
+	}
+
+	#block-calendarnavblock {
+		background-color: #28599b;
+    	box-shadow: 0px 0px 5px #000;
+		margin-bottom: 2em;
+
+		.calendar_nav {
+			
+
+			.input-group-addon {
+				color: #fff;
+				background-color: rgba(255,255,255,.2);
+				cursor: pointer;
+			}
 		}
 	}
 	.region-content {
@@ -224,6 +322,97 @@ body {
 			}
 		}
 		
+	}
+	.calendarWrapper {
+		position: relative;
+		width: 100vw;
+		left: 50%;
+		margin-left: -50vw;
+		padding: 2em;
+		background: #3a82de;
+
+		.clear {
+			clear: both;
+		}
+	
+		.calendarMarkup {
+			
+			margin-bottom: 10px;
+			
+			/*
+			display:grid;
+
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+			grid-gap: 5px;
+			*/
+
+			&::after {
+				display: block;
+				clear: both;
+			}
+			.Column {
+				border: 1px solid #000;
+				background-color: #2196F3;
+				margin: 0 0 10px;
+				float: left;
+				width: 4.9%;
+				
+
+				.Cell {
+					font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif;
+					font-style: italic;
+					font-size: 20px;
+					line-height: 30px;
+					height: 30px;
+					position: relative;
+					text-align: center;
+					font-weight: bold;
+					text-align: center;
+					&.GC {
+						background-color: #1f1f1f;
+						&.Month {
+							background: transparent;
+							
+						}
+						
+					}
+					&.HCC {
+						background: #a50000;
+						&.Month {
+							background-color: transparent;
+							color: #7f9aac;
+							
+						}
+					}
+					&.SC {
+						background: #0000aa; 
+						color: #fff;
+						&.Month {
+							background: transparent;
+							&.first{
+								background: #0000aa; 
+								color: #fff;
+							}
+						}
+						&.SabbathCount, &.SabbathCountEnd {
+							background: #fff;
+							color: #000;
+						}
+
+					}
+
+				}
+			}
+			> div {
+				display: block;
+			}
+
+
+		}
+	}
+	h3 {
+		clear: both;
 	}
 	#block-views-block-expanded-calendar-information-block-1 {
 		position: fixed;
@@ -262,17 +451,21 @@ body {
 /* chart block */
 .view-id-biblical_charts {
 	.view-content {
-		display: flex;
-		flex-wrap: wrap;
+		display: block;
+
 		.views-row {
-			flex: 1 25%;
+			float: left;
+			width: 50%;
 			background-image: url(/sites/default/files/linkIcon.png);
 			background-size: cover;
 			background-repeat: no-repeat;
-			max-width: 25%;
 			height: 184px;
 			margin: 0 10px;
 			padding: 2em;
+
+			.views-field-title {
+				font-size: 2em;
+			}
 			
 		}
 	}
@@ -282,14 +475,14 @@ body {
 .view-timeline {
 	.timeline-line {
 		transition: all ease 0.3s;
-		border-left: 2px solid #336688;
+		border-left: 2px solid $timelineBorderLine;
 		position: absolute;
 		width: 1px;
 		left: 0;
 		
 		&::before {
 			content: "";
-			border-top:2px solid #336688;
+			border-top:2px solid $timelineBorderLine;
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -297,7 +490,7 @@ body {
 		}
 		&::after {
 			content: "";
-			border-top:2px solid #336688;
+			border-top:2px solid $timelineBorderLine;
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -434,13 +627,6 @@ body {
 	}
 }
 
-.corbin {
-	display: block;
-	padding: 0;
-}
-
-
-
 
 @keyframes banner {
 	0% {
@@ -451,3 +637,16 @@ body {
 	}
   }
   
+
+  @media all and (min-width: 768px){
+	.view-id-biblical_charts {
+		.view-content {
+			display: block;
+	
+			.views-row {
+				float: left;
+				width: 25%;
+			}
+		}
+	}
+  }

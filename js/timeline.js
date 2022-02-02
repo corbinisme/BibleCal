@@ -6,6 +6,7 @@ var timeline = {
 	spacer: 3,
 	layout: "vert",
 	init: function(){
+		console.log("wrong file")
 		let test = document.querySelectorAll(".view-id-timeline");
 		if(test.length){
 			timeline.analyzeRows();
