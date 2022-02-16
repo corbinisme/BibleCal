@@ -142,7 +142,7 @@ body {
 .main-container {
   background-image: url(../images/background.jpg);
   background-size: 115%;
-  background-position: center;
+  background-position: bottom center;
   background-repeat: no-repeat;
   background-color: #28599b;
   color: #fff;
