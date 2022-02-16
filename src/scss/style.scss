@@ -1,12 +1,13 @@
 $linkColor: #336688;
 $timelineBorderLine: #b2ccdd;
+$bgColor: #28599b;
+$linkColor: #fff;
 
 @import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap');
 body {
 	opacity: 1;
-	background: url(../images/background.jpg) bottom center no-repeat;
-    background-color: #28599b;
-	background-size: 110%;
+
+    background-color: $bgColor;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -19,7 +20,7 @@ body {
 /* header */
 #navbar {
 	background-color: transparent;
-	background-image: url("../images/headerBG.jpg");
+	background-image: url("../images/headerBG.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	min-height: 141px;
@@ -166,17 +167,28 @@ body {
 	}
 }
 
-.main-container > .row aside {
-	height: 70px;
-}
 .region-sidebar-second {
 	display: none;
 }
 
 
 .main-container {
-	max-width: 1010px;
+	background-image: url(../images/background.jpg);
+	background-size: 115%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: $bgColor;
 	color: #fff;
+	
+
+	.main-inner {
+		background-color: $bgColor;
+		padding-bottom: 3em;
+	}
+
+	> .row aside {
+		height: 70px;
+	}
 	>.row {
 		section {
 			width: 100%;
@@ -241,10 +253,13 @@ body {
 		
 	}
 }
-.region-header {
+.region-highlighted {
 	.breadcrumb {
 		background: #333;
 	}
+}
+.region-header {
+	
 	.page-header {
 		margin-top: 1em;
 	}
@@ -627,6 +642,16 @@ body {
 	}
 }
 
+footer {
+	&.footer {
+		border-top: 1px solid #000;
+		margin-top: 0;
+
+		a {
+			color: $linkColor;
+		}
+	}
+}
 
 @keyframes banner {
 	0% {

@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap");
 body {
   opacity: 1;
-  background: url(../images/background.jpg) bottom center no-repeat;
   background-color: #28599b;
-  background-size: 110%;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -16,7 +14,7 @@ body {
 /* header */
 #navbar {
   background-color: transparent;
-  background-image: url("../images/headerBG.jpg");
+  background-image: url("../images/headerBG.png");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 141px;
@@ -137,17 +135,24 @@ body {
   background-image: url(../images/bannerImage_07.jpg);
 }
 
-.main-container > .row aside {
-  height: 70px;
-}
-
 .region-sidebar-second {
   display: none;
 }
 
 .main-container {
-  max-width: 1010px;
+  background-image: url(../images/background.jpg);
+  background-size: 115%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #28599b;
   color: #fff;
+}
+.main-container .main-inner {
+  background-color: #28599b;
+  padding-bottom: 3em;
+}
+.main-container > .row aside {
+  height: 70px;
 }
 .main-container > .row section {
   width: 100%;
@@ -163,7 +168,7 @@ body {
   color: #333;
 }
 .main-container .well a {
-  color: #336688;
+  color: #fff;
 }
 .main-container .panel .panel-body {
   color: #000;
@@ -202,9 +207,10 @@ body {
   margin-bottom: 50px;
 }
 
-.region-header .breadcrumb {
+.region-highlighted .breadcrumb {
   background: #333;
 }
+
 .region-header .page-header {
   margin-top: 1em;
 }
@@ -532,6 +538,14 @@ body {
   position: absolute;
   top: 0;
   left: 38px;
+}
+
+footer.footer {
+  border-top: 1px solid #000;
+  margin-top: 0;
+}
+footer.footer a {
+  color: #fff;
 }
 
 @keyframes banner {
