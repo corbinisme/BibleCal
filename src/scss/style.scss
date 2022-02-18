@@ -2,8 +2,21 @@ $linkColor: #336688;
 $timelineBorderLine: #b2ccdd;
 $bgColor: #28599b;
 $linkColor: #fff;
+$headingColor: #f1cb98;
 
 @import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap');
+
+/* global  */
+h1 {
+	font-size: 3.5em;
+	font-weight: 600;
+	&.page-header {
+		color: $headingColor;
+		border: 0;
+
+	}
+}
+
 body {
 	opacity: 1;
 
@@ -16,6 +29,8 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/* region header ///////////////////////////// */
 
 /* header */
 #navbar {
@@ -167,9 +182,11 @@ body {
 	}
 }
 
-.region-sidebar-second {
-	display: none;
+/* region highlighted ///////////////////////////// */
+.region-highlighted {
+	padding-top: 2em;
 }
+
 
 
 .main-container {
@@ -212,47 +229,39 @@ body {
 			color: #000;
 		}
 	}
+
+
+	.region-sidebar-second {
+		display: none;
+	}
+
+	
 }
 
+/* region footer ///////////////////////////// */
 .footer {
 	border: none;
 	.container {
 		position: relative;
 		top: 1em;
 	}
-}
+	&.footer {
+		border-top: 1px solid #000;
+		margin-top: 0;
 
-.path-frontpage {
-	.featuredlinks {
-		a{
-			display: block;
-			img {
-				width: 100%;
-			}
-			&:hover {
-				transform: scale(1.05);
-			}
+		a {
+			color: $linkColor;
 		}
-		
-	}
-	.main-container {
-		padding-top: 0!important;
-	}
-
-	#block-subhero {
-		background: #4a98dc;
-		color: #fff;
-		padding: 2em;
-		text-align: center;
-		font-size: 2em;
-		width: 100vw;
-		position: relative;
-		margin-left: -50vw;
-		left: 50%;
-		margin-bottom: 50px;
-		
 	}
 }
+
+
+@import 'partials/front';
+@import 'partials/generator';
+@import 'partials/charts';
+@import 'partials/timeline'; 
+@import 'partials/articles';
+
 .region-highlighted {
 	.breadcrumb {
 		background: #333;
@@ -264,394 +273,10 @@ body {
 		margin-top: 1em;
 	}
 }
-.path-calendar {
-	.view-significant-dates {
-
-		.content, footer {
-			display: none;
-		}
-	}
-	.breadcrumb {
-		display: none;
-	}
-	.main-container {
-		max-width: 100%;
-		width: 100%;
-		.row {
-			section.col-sm-12, section.col-sm-9 {
-				padding: 0;
-
-				section {
-					padding: 1em;
-				}
-			}
-		}
-	}
-	#block-heroimages {
-		display: none;
-	}
-
-	#block-calendarblock, #block-calendarpagebottomtext {
-		max-width: 976px;
-		width: 80%;
-		margin: auto;
-	}
-	h1 {
-		text-align: center;
-		&.page-header {
-			display: none;
-		}
-	}
-
-	#block-calendarnavblock {
-		background-color: #28599b;
-    	box-shadow: 0px 0px 5px #000;
-		margin-bottom: 2em;
-
-		.calendar_nav {
-			
-
-			.input-group-addon {
-				color: #fff;
-				background-color: rgba(255,255,255,.2);
-				cursor: pointer;
-			}
-		}
-	}
-	.region-content {
-		border-top: 1px dotted #ccc;
-		padding-top: 1em;
-		margin-top: 1em;
-	}
-	.SignificantDateRow {
-		margin-bottom: 1em;
-		h2 {
-			background: #eee;
-			color: #fff;
-			padding: 10px;
-			margin: 0;
-			border-radius: .5em;
-			font-size: 1.5em;
-			a {
-				color: #999;
-			}
-		}
-		
-	}
-	.calendarWrapper {
-		position: relative;
-		width: 100vw;
-		left: 50%;
-		margin-left: -50vw;
-		padding: 2em;
-		background: #3a82de;
-
-		.clear {
-			clear: both;
-		}
-	
-		.calendarMarkup {
-			
-			margin-bottom: 10px;
-			
-			/*
-			display:grid;
-
-			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-
-			grid-gap: 5px;
-			*/
-
-			&::after {
-				display: block;
-				clear: both;
-			}
-			.Column {
-				border: 1px solid #000;
-				background-color: #2196F3;
-				margin: 0 0 10px;
-				float: left;
-				width: 4.9%;
-				
-
-				.Cell {
-					font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif;
-					font-style: italic;
-					font-size: 20px;
-					line-height: 30px;
-					height: 30px;
-					position: relative;
-					text-align: center;
-					font-weight: bold;
-					text-align: center;
-					&.GC {
-						background-color: #1f1f1f;
-						&.Month {
-							background: transparent;
-							
-						}
-						
-					}
-					&.HCC {
-						background: #a50000;
-						&.Month {
-							background-color: transparent;
-							color: #7f9aac;
-							
-						}
-					}
-					&.SC {
-						background: #0000aa; 
-						color: #fff;
-						&.Month {
-							background: transparent;
-							&.first{
-								background: #0000aa; 
-								color: #fff;
-							}
-						}
-						&.SabbathCount, &.SabbathCountEnd {
-							background: #fff;
-							color: #000;
-						}
-
-					}
-
-				}
-			}
-			> div {
-				display: block;
-			}
 
 
-		}
-	}
-	h3 {
-		clear: both;
-	}
-	#block-views-block-expanded-calendar-information-block-1 {
-		position: fixed;
-		width: 100%;
-		height: calc(100vh - 60px);
-		height: 150px;
-		padding: 2em;
-		background: rgba(255,255,255,.2);
-		top: 60px;
-		left: 0;
-		z-index: 78;
-		overflow: hidden;
-		position: static;
-		border: 2px dashed #ccc;
-		color: #000;
-		margin: 2em 0;
-
-		.expanded-calendar-wrapper {
-			.view-content {
-				margin-bottom: 2em;
-				display: flex;
-				.views-row {
-					flex: 1 auto;
-				}
-			}
-		}
-	}
-	#block-calendarpagebottomtext {
-		h2 {
-			display: none;
-		}
-		margin-top: 2em;
-	}
-} 
-
-/* chart block */
-.view-id-biblical_charts {
-	.view-content {
-		display: block;
-
-		.views-row {
-			float: left;
-			width: 50%;
-			background-image: url(/sites/default/files/linkIcon.png);
-			background-size: cover;
-			background-repeat: no-repeat;
-			height: 184px;
-			margin: 0 10px;
-			padding: 2em;
-
-			.views-field-title {
-				font-size: 2em;
-			}
-			
-		}
-	}
-}
-
-/* timeline */
-.view-timeline {
-	.timeline-line {
-		transition: all ease 0.3s;
-		border-left: 2px solid $timelineBorderLine;
-		position: absolute;
-		width: 1px;
-		left: 0;
-		
-		&::before {
-			content: "";
-			border-top:2px solid $timelineBorderLine;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 50vw;
-		}
-		&::after {
-			content: "";
-			border-top:2px solid $timelineBorderLine;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 50vw;
-		}
-		&.hover{
-			border-color: orange;
-
-			&::before {
-				border-color: orange;
-			}
-			&::after {
-				border-color: orange;
-			}
-		}
-	}
-	.view-content {
-		position: relative;
-		z-index: 300;
-	}
-	.views-row {
-		font-size: 1.3em;
-		margin: 1em 0;
-		display: flex;
-		transition: all ease 0.3s;
-		border-top: 1px solid transparent;
-		border-bottom: 1px solid transparent;
-		background: #28599b;
-		.views-field-title {
-			transition: all ease 0.3s;
-		}
-		&.hover {
-			border: 1px solid orange;
-			.views-field-title {
-				text-indent: 2px;
-			}
-			
-		}
-		&.duplicate {
-			.views-field-field-gc-era, .views-field-field-gc-year {
-				visibility: hidden;
-			}
-		}
-		&.connected {
-			border-left: 3px solid pink;
-		}
-		>* {
-			flex: 1 auto;
-			padding: 0.4em;
-
-			&.views-field-field-gc-year {
-				order: 1;
-				background: #333;
-				color: #fff;
-				padding-right: 0;
-			}
-			&.views-field-field-gc-era {
-				order: 2;
-				background: #333;
-				color: #fff;
-
-			}
-			&.views-field-title {
-				order: 3;
-				flex: 1 99%;
-			}
-			&.views-field-field-am-year {
-				position: absolute;
-				right: 0;
-				white-space: nowrap;
-				display: flex;
-				.field-content {
-					margin-left: 5px;
-				}
-			}
-			&.views-field-field-related {
-				position: absolute;
-				right: 50px;
-				display: none;
-			}
-		}
-		
-	}
-	&.horiz {
-		overflow: auto;
-		height: 350px;
-		.view-content {
-			position: static;
-			margin-left: 0!important;
-			top: 0;
-			left: 0;
-			height: 350px;
-			overflow: auto;
-			display: flex;
-			.views-row {
-				flex: 1 auto;
-				min-width: 300px;
-				display: block;
-				position: relative;
-				*{
-					&.views-field-field-am-year {
-						position: static;
-						right: 0;
-						clear: both;
-						width: 100%;
-						float: none;
-						display: flex;
-					}
-					&.views-field-field-related {
-						position: static;
-						right: 50px;
-					}
-					&.views-field-field-gc-era {
-						float: left;
-						position: absolute;
-						top: 0;
-						left: 0;
 
 
-					}
-					&.views-field-title {
-						margin-top: 50px;
-					}
-					&.views-field-field-gc-year{
-						float: left;
-						position: absolute;
-						top: 0;
-						left: 38px;
-						
-					}
-				}
-			}
-		}
-	}
-}
-
-footer {
-	&.footer {
-		border-top: 1px solid #000;
-		margin-top: 0;
-
-		a {
-			color: $linkColor;
-		}
-	}
-}
 
 @keyframes banner {
 	0% {

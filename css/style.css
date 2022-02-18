@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap");
+/* global  */
+h1 {
+  font-size: 3.5em;
+  font-weight: 600;
+}
+h1.page-header {
+  color: #f1cb98;
+  border: 0;
+}
+
 body {
   opacity: 1;
   background-color: #28599b;
@@ -11,6 +21,7 @@ body {
   overflow-y: auto;
 }
 
+/* region header ///////////////////////////// */
 /* header */
 #navbar {
   background-color: transparent;
@@ -135,8 +146,9 @@ body {
   background-image: url(../images/bannerImage_07.jpg);
 }
 
-.region-sidebar-second {
-  display: none;
+/* region highlighted ///////////////////////////// */
+.region-highlighted {
+  padding-top: 2em;
 }
 
 .main-container {
@@ -173,13 +185,24 @@ body {
 .main-container .panel .panel-body {
   color: #000;
 }
+.main-container .region-sidebar-second {
+  display: none;
+}
 
+/* region footer ///////////////////////////// */
 .footer {
   border: none;
 }
 .footer .container {
   position: relative;
   top: 1em;
+}
+.footer.footer {
+  border-top: 1px solid #000;
+  margin-top: 0;
+}
+.footer.footer a {
+  color: #fff;
 }
 
 .path-frontpage .featuredlinks a {
@@ -205,14 +228,6 @@ body {
   margin-left: -50vw;
   left: 50%;
   margin-bottom: 50px;
-}
-
-.region-highlighted .breadcrumb {
-  background: #333;
-}
-
-.region-header .page-header {
-  margin-top: 1em;
 }
 
 .path-calendar .view-significant-dates .content, .path-calendar .view-significant-dates footer {
@@ -249,6 +264,9 @@ body {
   background-color: #28599b;
   box-shadow: 0px 0px 5px #000;
   margin-bottom: 2em;
+}
+.path-calendar #block-calendarnavblock .calendar_nav {
+  padding: 1em 0;
 }
 .path-calendar #block-calendarnavblock .calendar_nav .input-group-addon {
   color: #fff;
@@ -381,7 +399,6 @@ body {
   display: none;
 }
 
-/* chart block */
 .view-id-biblical_charts .view-content {
   display: block;
 }
@@ -540,12 +557,32 @@ body {
   left: 38px;
 }
 
-footer.footer {
-  border-top: 1px solid #000;
-  margin-top: 0;
+.view-biblical-articles .dataTable thead th {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #eee;
+  white-space: nowrap;
 }
-footer.footer a {
-  color: #fff;
+.view-biblical-articles .dataTable tr {
+  background-color: transparent;
+}
+.view-biblical-articles .dataTable tr.odd {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.view-biblical-articles .dataTable tr.even {
+  background-color: transparent;
+}
+.view-biblical-articles .dataTables_filter input {
+  height: 35px;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.region-highlighted .breadcrumb {
+  background: #333;
+}
+
+.region-header .page-header {
+  margin-top: 1em;
 }
 
 @keyframes banner {

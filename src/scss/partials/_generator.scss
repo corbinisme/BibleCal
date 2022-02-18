@@ -1,0 +1,198 @@
+.path-calendar {
+	.view-significant-dates {
+
+		.content, footer {
+			display: none;
+		}
+	}
+	.breadcrumb {
+		display: none;
+	}
+	.main-container {
+		max-width: 100%;
+		width: 100%;
+		.row {
+			section.col-sm-12, section.col-sm-9 {
+				padding: 0;
+
+				section {
+					padding: 1em;
+				}
+			}
+		}
+	}
+	#block-heroimages {
+		display: none;
+	}
+
+	#block-calendarblock, #block-calendarpagebottomtext {
+		max-width: 976px;
+		width: 80%;
+		margin: auto;
+	}
+	h1 {
+		text-align: center;
+		&.page-header {
+			display: none;
+		}
+	}
+
+	#block-calendarnavblock {
+		background-color: #28599b;
+    	box-shadow: 0px 0px 5px #000;
+		margin-bottom: 2em;
+
+		.calendar_nav {
+			padding: 1em 0;
+
+			.input-group-addon {
+				color: #fff;
+				background-color: rgba(255,255,255,.2);
+				cursor: pointer;
+			}
+		}
+	}
+	.region-content {
+		border-top: 1px dotted #ccc;
+		padding-top: 1em;
+		margin-top: 1em;
+	}
+	.SignificantDateRow {
+		margin-bottom: 1em;
+		h2 {
+			background: #eee;
+			color: #fff;
+			padding: 10px;
+			margin: 0;
+			border-radius: .5em;
+			font-size: 1.5em;
+			a {
+				color: #999;
+			}
+		}
+		
+	}
+	.calendarWrapper {
+		position: relative;
+		width: 100vw;
+		left: 50%;
+		margin-left: -50vw;
+		padding: 2em;
+		background: #3a82de;
+
+		.clear {
+			clear: both;
+		}
+	
+		.calendarMarkup {
+			
+			margin-bottom: 10px;
+			
+			/*
+			display:grid;
+
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+			grid-gap: 5px;
+			*/
+
+			&::after {
+				display: block;
+				clear: both;
+			}
+			.Column {
+				border: 1px solid #000;
+				background-color: #2196F3;
+				margin: 0 0 10px;
+				float: left;
+				width: 4.9%;
+				
+
+				.Cell {
+					font-family: "Century Gothic" , CenturyGothic, AppleGothic, sans-serif;
+					font-style: italic;
+					font-size: 20px;
+					line-height: 30px;
+					height: 30px;
+					position: relative;
+					text-align: center;
+					font-weight: bold;
+					text-align: center;
+					&.GC {
+						background-color: #1f1f1f;
+						&.Month {
+							background: transparent;
+							
+						}
+						
+					}
+					&.HCC {
+						background: #a50000;
+						&.Month {
+							background-color: transparent;
+							color: #7f9aac;
+							
+						}
+					}
+					&.SC {
+						background: #0000aa; 
+						color: #fff;
+						&.Month {
+							background: transparent;
+							&.first{
+								background: #0000aa; 
+								color: #fff;
+							}
+						}
+						&.SabbathCount, &.SabbathCountEnd {
+							background: #fff;
+							color: #000;
+						}
+
+					}
+
+				}
+			}
+			> div {
+				display: block;
+			}
+
+
+		}
+	}
+	h3 {
+		clear: both;
+	}
+	#block-views-block-expanded-calendar-information-block-1 {
+		position: fixed;
+		width: 100%;
+		height: calc(100vh - 60px);
+		height: 150px;
+		padding: 2em;
+		background: rgba(255,255,255,.2);
+		top: 60px;
+		left: 0;
+		z-index: 78;
+		overflow: hidden;
+		position: static;
+		border: 2px dashed #ccc;
+		color: #000;
+		margin: 2em 0;
+
+		.expanded-calendar-wrapper {
+			.view-content {
+				margin-bottom: 2em;
+				display: flex;
+				.views-row {
+					flex: 1 auto;
+				}
+			}
+		}
+	}
+	#block-calendarpagebottomtext {
+		h2 {
+			display: none;
+		}
+		margin-top: 2em;
+	}
+} 

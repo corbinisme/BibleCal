@@ -1,0 +1,31 @@
+.path-frontpage {
+	.featuredlinks {
+		a{
+			display: block;
+			img {
+				width: 100%;
+			}
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+		
+	}
+	.main-container {
+		padding-top: 0!important;
+	}
+
+	#block-subhero {
+		background: #4a98dc;
+		color: #fff;
+		padding: 2em;
+		text-align: center;
+		font-size: 2em;
+		width: 100vw;
+		position: relative;
+		margin-left: -50vw;
+		left: 50%;
+		margin-bottom: 50px;
+		
+	}
+}
