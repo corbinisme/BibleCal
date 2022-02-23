@@ -52,6 +52,8 @@
  */
 #}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+
+
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
   {% block navbar %}
@@ -63,12 +65,21 @@
       ]
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
+
+      <div class="topBar">
+        <div class="{{ container }}">
+        {{ page.topbar }}
+        </div>
+      </div>
       <div class="container">
       {% if not navbar_attributes.hasClass(container) %}
         <div class="{{ container }}">
       {% endif %}
       <div class="navbar-header">
+        <div class="{{ container }}">
         {{ page.navigation }}
+
+        </div>
         {# .btn-navbar is used as the toggle for collapsed navbar content #}
         {% if page.navigation_collapsible %}
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
