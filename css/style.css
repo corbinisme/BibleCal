@@ -71,6 +71,14 @@ body {
 #navbar .menu li.active a {
   background: rgba(255, 255, 255, 0.4);
 }
+#navbar .region-navigation {
+  position: relative;
+}
+#navbar .region-navigation .block-search-form-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 /* language */
 #block-languageswitcher {
