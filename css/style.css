@@ -33,6 +33,7 @@ body {
   max-width: 100vw;
   margin-bottom: 0;
   padding-top: 40px;
+  border-color: #080808;
 }
 #navbar #block-biblecal-account-menu {
   display: none;
@@ -117,6 +118,8 @@ body {
   padding: 0;
   display: flex;
   animation: banner linear 100s infinite;
+  position: relative;
+  top: -5px;
 }
 #block-heroimages .scroller_wrapper ul li {
   flex: 1 auto;
@@ -129,25 +132,25 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-#block-heroimages .scroller_wrapper ul li:nth-child(1) {
+#block-heroimages .scroller_wrapper ul li.slide1 {
   background-image: url(../images/bannerImage_01.jpg);
 }
-#block-heroimages .scroller_wrapper ul li:nth-child(2) {
+#block-heroimages .scroller_wrapper ul li.slide2 {
   background-image: url(../images/bannerImage_02.jpg);
 }
-#block-heroimages .scroller_wrapper ul li:nth-child(3) {
+#block-heroimages .scroller_wrapper ul li.slide3 {
   background-image: url(../images/bannerImage_03.jpg);
 }
-#block-heroimages .scroller_wrapper ul li:nth-child(4) {
+#block-heroimages .scroller_wrapper ul li.slide4 {
   background-image: url(../images/bannerImage_04.jpg);
 }
-#block-heroimages .scroller_wrapper ul li:nth-child(5) {
+#block-heroimages .scroller_wrapper ul li.slide5 {
   background-image: url(../images/bannerImage_05.jpg);
 }
-#block-heroimages .scroller_wrapper ul li:nth-child(6) {
+#block-heroimages .scroller_wrapper ul li.slide6 {
   background-image: url(../images/bannerImage_06.jpg);
 }
-#block-heroimages .scroller_wrapper ul li:nth-child(7) {
+#block-heroimages .scroller_wrapper ul li.slide7 {
   background-image: url(../images/bannerImage_07.jpg);
 }
 
@@ -233,6 +236,8 @@ body {
   margin-left: -50vw;
   left: 50%;
   margin-bottom: 50px;
+  box-shadow: 0px 0px 19px #333;
+  top: -5px;
 }
 
 .path-calendar .view-significant-dates .content, .path-calendar .view-significant-dates footer {
