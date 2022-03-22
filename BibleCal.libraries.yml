@@ -2,8 +2,7 @@ framework:
   css:
     theme:
       css/style.css: {}
-  js:
-      js/timeline.js: {}
+
 # Uncomment for LESS source JavaScript files.
 #  js:
 #    bootstrap/js/affix.js: {}

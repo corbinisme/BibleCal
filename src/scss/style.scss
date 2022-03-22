@@ -1,19 +1,21 @@
 $linkColor: #336688;
 $timelineBorderLine: #b2ccdd;
 $bgColor: #28599b;
-$linkColor: #fff;
-$headingColor: #f1cb98;
+$linkColor: #fff;  
+$headingColor: #f1cb98; 
 
 @import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap');
+@import "partials/mediafunctions";
+
 
 /* global  */
 h1 {
 	font-size: 3.5em;
 	font-weight: 600;
-	&.page-header {
+	&.page-header { 
 		color: $headingColor;
-		border: 0;
-
+		border: 0; 
+ 
 	}
 }
 
@@ -48,6 +50,16 @@ body {
 	#block-biblecal-account-menu {
 		display: none;
 	}
+	>.container {
+		display: flex;
+		align-items: center;
+		align-content: revert;
+		min-height: 91px;
+		flex-wrap: wrap;
+		@include respond-above(sm){
+			display: block;
+		}
+	}
 
 	&.navbar-default {
 		.navbar-nav {
@@ -63,6 +75,27 @@ body {
 				}
 			} 
 		} 
+
+		.navbar-header {
+			display: flex;
+			align-items: flex-start;
+			margin: 0 -30px;
+			flex: 1 100%;
+			@include respond-above(sm){
+				display: block;
+				margin: 0 auto;
+			}
+			>.container {
+				margin: 0;
+				flex: 1 99%;
+			}
+		}
+		.navbar-collapse {
+			flex: 1 100%;
+		}
+		.region-navigation-collapsible {
+			flex: 1 100%;
+		}
 		.dropdown-menu {
 			background: #295ba0;
 			>li  {
@@ -86,6 +119,9 @@ body {
 
 	.navbar-toggle {
 		top: 15px;
+		@include respond-below(xs){
+			top: 0px;
+		}
 	}
 	.menu {
 		float: left;
@@ -151,7 +187,10 @@ body {
 						align-items: center;
 
 						img {
-
+							display: none;
+							@include respond-above(sm){
+								display: inline-block;
+							}
 							height: 12px;
 							width: 24px;
 							margin-right: 5px;
