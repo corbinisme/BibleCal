@@ -155,6 +155,7 @@ $SC: #0000AA;
 				margin: 0 0 10px;
 				float: left;
 				width: 4.9%;
+				min-width: 100px;
 				
 
 				.Cell {
@@ -171,6 +172,7 @@ $SC: #0000AA;
 						background-color: #1f1f1f;
 						&.Month {
 							background: transparent;
+
 							
 						}
 						
@@ -180,6 +182,13 @@ $SC: #0000AA;
 						&.Month {
 							background-color: transparent;
 							color: #7f9aac;
+							&.first {
+								background: #a50000;
+								white-space: nowrap;
+								text-shadow: 1px 1px 5px #000000;
+								color: #fff;
+								padding: 3px;
+							}
 							
 						}
 					}

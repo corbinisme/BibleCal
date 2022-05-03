@@ -514,6 +514,7 @@ body {
   margin: 0 0 10px;
   float: left;
   width: 4.9%;
+  min-width: 100px;
 }
 .path-calendar .calendarWrapper .calendarMarkup .Column .Cell {
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
@@ -538,6 +539,13 @@ body {
 .path-calendar .calendarWrapper .calendarMarkup .Column .Cell.HCC.Month {
   background-color: transparent;
   color: #7f9aac;
+}
+.path-calendar .calendarWrapper .calendarMarkup .Column .Cell.HCC.Month.first {
+  background: #a50000;
+  white-space: nowrap;
+  text-shadow: 1px 1px 5px #000000;
+  color: #fff;
+  padding: 3px;
 }
 .path-calendar .calendarWrapper .calendarMarkup .Column .Cell.SC {
   background: #0000aa;
